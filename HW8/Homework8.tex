@@ -1,0 +1,266 @@
+\documentclass[12pt]{article}
+
+
+\pagestyle{headings} \thispagestyle{empty}
+%\pagestyle{empty}
+  \textwidth      6.4in
+      \oddsidemargin 0.0in
+      \topmargin     -0.4in
+      \topskip          0pt
+      \headheight      12pt
+      \footskip        18pt
+%      \footheight      12pt
+      \textheight     650pt
+
+\parindent=0cm
+\baselineskip=2cm
+
+
+
+\renewcommand{\baselinestretch}{1.5}
+
+\begin{document}
+
+\textbf{Name: Taylor Heilman}    \hspace{4in} \textbf{Due: 11-12-15}
+\begin{center} \textbf{Math 210: Homework 8 - Fall 2015} \end{center}
+
+\begin{enumerate}
+
+\item Problem 9.12(c):
+
+{PF
+
+Let $x \in f(C) - f(D)$
+
+Therefore $x \in f(C)$ and $x \notin f(D)$
+
+So $x = f(y)$, where $y \in C$ and $x \notin f(D)$
+
+Then if $y \in D, x = f(y)$ then $x \in f(D)$  this is a contradiction because we know $x \notin f(D)$
+
+So $y \notin D$
+
+Hence $x = f(y)$, where $y \in C$ and $y \notin D$
+
+Therefore $x = f(y)$ where $y \in C - D$
+
+So $x \in f(C-D)$
+
+Thus $x \in f(C) -f(D)$
+
+= $x \in f(C-D)$ 
+
+So $f(C) - f(D) \subseteq f(C-D)$
+
+
+//
+}
+
+\item Problem 9.12(f):
+
+{PF
+
+(WTS: $f^{-1}(E-F) \subseteq f^{-1}(E)-f^{-1}(F)$ and $f^{-1}(E) - f^{-1}(F) \subseteq f^{-1}(E-F)$)
+
+$\Rightarrow$
+
+Let $x \in f^{-1}(E-F)$
+
+So $x = f^{-1}(y)  \exists y \in E-F$ such that
+
+$y \in E, Y \notin F$
+
+$\Rightarrow$ $x = f^{-1}(y)$ where $y \in E$ , $y \notin F$
+
+$\Rightarrow$ $x = f^{-1}(y)$ where $y \in E$ , $x =  f^{-1}(y)$ where $y \notin F$
+
+$\Rightarrow$ $x = f^{-1}(E)$ , $x \notin  f^{-1}(F)$
+
+$\Rightarrow$ $x = f^{-1}(E) - f^{-1}(E)$
+
+So  $x \in f^{-1}(E-F) $ 
+
+$\Rightarrow$  $x \in f^{-1}(E) - x \in f^{-1}(F) $ for every x
+
+Hence $f^{-1}(E-F) \subseteq f^{-1}(E)-f^{-1}(F)$
+ 
+$\Leftarrow$
+
+Let $x \in f^{-1}(E)-f^{-1}(F)$
+
+So $\exists $ and $\notin y \in E$ and $ y \notin F$  such that $x =  f^{-1}(y)$
+
+$\Rightarrow$ $x = f^{-1}(y)$  where $y \in E - F$
+
+$\Rightarrow$ $x \in f^{-1}(E-F)$
+
+Hence $x \in f^{-1}(E)-f^{-1}(F) $
+
+$\subseteq  f^{-1}(E-F)$ 
+
+Therefore  $ f^{-1}(E-F) = f^{-1}(E)-f^{-1}(F) $
+
+//
+}
+
+
+\item Problem 9.40:
+
+{PF
+
+Let $x \in A$
+
+Then  $(f  $ o $i_A)(a) = f(i_A(a))$
+
+= $f(a)$
+
+Similarly  $(i_B$ o $f)(a) = i_B(f(a))$
+
+= $f(a)$
+
+Therefore $(f  $ o $i_A) = f $ and $(i_B$ o $f) = f$
+
+//
+}
+
+\item Problem 9.46: 
+
+{PF
+
+(a.)
+
+$(g$ o $f)(3,8) = g(f(3,8))$
+
+= $g(3(3)-8, 3+8)$
+
+= $g(1,11)$
+
+=$(1-11, 2(1) + 11)$
+
+=$(-10, 13)$
+
+Hence $(g$ o $f)(3,8) = (-10,13)$
+
+(b.)
+
+Let $(w,x),(y,z) \in A \times B$
+
+Assume $(g$ o $f)(w,x) = (g$ o $f)(y,z)$
+
+So $g(f(w,x)) = g(f(y,z))$
+
+Then $g(3w-x,w+x) = g(3y - z, y+z)$
+
+Thus $(3w - x - w -x, 6w -2x + w +x) = (3y - z - y - z, 6y -2z + y +z)$
+
+So $(2w - 2x, 5w -x) = (2y - 2z, 5y -z)$
+
+Hence $2w - 2x = 2y - 2z$ and $5w - x = 5y -z$
+
+Therefore $w-y = x-z$ and $5(w-y) = x - z$
+
+So $w-y = 5(w-y)$
+
+$4(w-y) = 0$
+
+$w = y$
+
+Plugging this into $w-y = x-z$ and $5(w-y) = x - z$
+
+
+$0 = x-z$
+
+$x = z$
+
+Hence $(w,x) = (y,z)$
+
+So the function is one to one
+
+
+(c.)
+
+Let $(x,y) \in B x A$
+
+So $x,y$ are odd and even integers
+
+Hence $ a = \frac{2y - x}{12} \in A$ and $ b = \frac{2y - 7x}{12} \in B$
+
+Therefore $g($ o $f)(a,b) = g(f(a,b))$
+
+= $g(f(\frac{2y - x}{12} , \frac{2y-7x}{12} ))$
+
+= $g(3(\frac{2y-x}{12}) - \frac{2y - 7x}{12}, \frac{2y-x}{12} + \frac{2y - 7x}{12})$
+
+= $g( \frac{4y + 4x}{12}, \frac{4y - 8x}{12})$
+
+= $g( \frac{y + x}{3}, \frac{y -2x}{3})$
+
+= $( \frac{y+x}{3} - \frac{y - 2x}{3}, 2( \frac{y+x}{3} )+ \frac{y-2x}{3})$
+
+= $(x,y)$
+
+So the function is onto
+
+//
+}
+
+
+\item Problem 9.58:
+
+{PF
+
+Let $g: B \rightarrow A$ be surjective
+
+Then $g(B) = A$
+
+So $g(y) = x$
+
+Consider $(f$ o $g)(y) = f(g(y))$
+
+= $f(x)$
+
+= $y$
+
+= $I_B (y)$
+
+Also  $(g$ o $f)(x) = g(f(x))$
+
+= $g(y)$
+
+= $x$
+
+= $I_A (x)$
+
+Therefore $(g$ o $f)(x) = I_A(x))$
+
+
+
+//
+}
+
+
+\end{enumerate}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

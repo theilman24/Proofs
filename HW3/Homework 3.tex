@@ -1,0 +1,260 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+
+
+\pagestyle{headings} \thispagestyle{empty}
+%\pagestyle{empty}
+  \textwidth      6.4in
+      \oddsidemargin 0.0in
+      \topmargin     -0.4in
+      \topskip          0pt
+      \headheight      12pt
+      \footskip        18pt
+%      \footheight      12pt
+      \textheight     650pt
+
+\parindent=0cm
+\baselineskip=2cm
+
+%\include these lines if you want to use the LaTeX "theorem" environments
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{guess}{Conjecture}
+\newtheorem{example}[theorem]{Example}
+
+%include lines like this if you want to define your own commands
+%to save typing
+%\newcommand{\PROOF}{\noindent {\bf Proof}: }
+\newcommand{\REF}[1]{[\ref{#1}]}
+\newcommand{\Ref}[1]{(\ref{#1})}
+\newcommand{\dt}{\mbox{\rm   dt}}
+\newcommand{\qed}{\Large{\bf{$\diamond$}}}
+\newcommand{\phat}{\hat{p}}
+
+\DeclareSymbolFont{AMSb}{U}{msb}{m}{n}
+\DeclareMathSymbol{\N}{\mathbin}{AMSb}{"4E}
+\DeclareMathSymbol{\Z}{\mathbin}{AMSb}{"5A}
+\DeclareMathSymbol{\R}{\mathbin}{AMSb}{"52}
+\DeclareMathSymbol{\Q}{\mathbin}{AMSb}{"51}
+\DeclareMathSymbol{\I}{\mathbin}{AMSb}{"49}
+\DeclareMathSymbol{\C}{\mathbin}{AMSb}{"43}
+
+%\setstretch{1.5}
+
+\renewcommand{\baselinestretch}{1.5}
+
+\begin{document}
+
+\textbf{Name: Taylor Heilman}    \hspace{4in} \textbf{Due: Wed. Sept 30}
+\begin{center} \textbf{Math 210: Homework 3 - Spring 2015} \end{center}
+
+\begin{enumerate}
+
+\item (Problem 3.10) Prove that if $a$ and $c$ are odd integers, then $ab + bc$ is even for every integer $b$.
+
+{PF
+
+Suppose that $a,c$ are odd integers
+
+Since $a, c$ are odd, there exists $t, h \in \Z$ such that
+	$a = 2t +1$ and $b = 2h + 1$
+	
+It follows that, 
+
+
+
+
+\begin{eqnarray}
+ab + bc & = & b(a+c) \nonumber \\
+~ & = & b(2t + 1 + 2h + 1)\nonumber  \\
+~ & = & b(2t + 2h + 2)\nonumber \\
+~ & = & 2b(t + h + 1) \nonumber \\
+\end{eqnarray}
+
+
+Therefore, 
+ab + bc is even because b(t + h + 1) $\in \Z$  and 2 times any integer is an even number.
+//
+ }
+
+
+\item (Problem 3.20) Let $x \in \Z$.  Prove that $3x + 1$ is even if and only if $5x - 2$ is odd.
+
+{PF
+
+For the forward direction
+
+Assume 3$x$ + 1 is even
+
+Therefore, 3$x$ + 1 = 2$k$ for some $k \in \Z$
+
+So,
+
+\begin{eqnarray}  5x - 2 &= & 2x + (3x + 1) - 3    \nonumber \\
+~ & = &  2x + (3x + 1) - 3\nonumber  \\
+~ & = &  2x + 2k - 3 \nonumber \\
+~ & = &2x + 2k - 4 + 1  \nonumber \\
+~ & =& 2(x + k - 2) + 1 \nonumber \\
+\end{eqnarray}
+
+
+
+
+ 5$x$ - 2 
+
+= 2$x$ + (3$x$ + 1) - 3
+
+= 2$x$ + 2$k$ - 3
+
+= 2$x$ + 2$k$ - 4 + 1
+
+= 2($x$ + $k$ - 2) + 1 
+
+Therefore, 
+5$x$ - 2 is odd because ($x$ + $k$ - 2) $\in \Z$  and 2 times any integer + 1 is an odd number.
+}
+
+{For the other direction
+
+Assume 5$x$ - 2  is odd
+
+Therefore, 5$x$ - 2 = 2$k$ + 1 for some $k \in \Z$
+
+So, 
+\begin{eqnarray} 3x + 1 & =  & -2x + (5x - 2) + 3 \nonumber \\
+~ & = &  -2x + 2k + 1+ 3 \nonumber  \\
+~ & = &  -2x + 2k + 4 \nonumber \\
+~ & = &  2( -x +k + 2) \nonumber \\
+\end{eqnarray}
+
+
+Therefore
+3$x$ + 1 is even because (-$x$ + $k$ + 2) $\in \Z$  and 2 times any integer is an even number.
+
+
+Thus $3x + 1$ is even if and only if $5x - 2$ is odd.
+//
+}
+
+
+
+
+\item (Problem 3.30) Let $x, y \in \Z$.  Prove that $x - y$ is even if and only if $x$ and $y$ are of the same parity.
+{
+PF
+
+Suppose that $x$ and $y$ are of the same parity.
+
+Case 1: $x$ and $y$ are even.
+
+Therefore, $x$ = 2$k$ and $y$ = 2$t$  for some $k,t \in \Z$
+
+So, $x - y$
+
+= 2$k$ - 2$t$
+
+= 2($k - t$)
+
+Since ($k - t$) in $\in \Z$   $x - y$ is even
+
+
+Case 2:  $x$ and $y$ are odd.
+
+Therefore, $x$ = 2$k$ + 1 and $y$ = 2$t$+ 1  for some $k,t \in \Z$
+
+So, $x - y$
+
+= 2$k$ + 1 - 2$t$ + 1
+
+= 2(k - t + 1)
+
+Since ($k - t$ + 1) in $\in \Z$   $x - y$ is odd.  //
+
+}
+
+
+
+\item (Problem 4.8) In Result 4.4, it was proved for an integer $x$ that if $2 \mid (x^2 - 1)$, then $4 \mid (x^2 -1)$.  Prove that if $2 \mid (x^2 -1)$, then $8 \mid (x^2 - 1)$.
+
+{PF
+
+Assume 2 | ($x^2$ - 1)
+
+So $x^2$ - 1 = 2$y$ for some  $y \in \Z$
+
+Thus, $x^2$ = 2y + 1 is an odd integer.
+
+By theorem 3.12 $x$ is also an odd integer.
+
+So $x$ = 2$z$ + 1 for some $z \in \Z$
+
+Consider $x^2$ - 1 = (4$b$ + 1)$^2$ - 1 
+
+= 16$b^2$ + 8$b$ 
+
+= 8(2$b$ + $b$)
+
+Since (2$b$ + $b$) is an integer, 8 | $x^2$ - 1
+
+
+}
+
+
+
+\item (Problem 4.16) Let $a, b \in \Z$.  Prove that if $a^2 + 2b^2 \equiv 0 \text{ (mod 3)}$, then either $a$ and $b$ are both congruent to 0 modulo 3 or neither is congruent to 0 modulo 3.
+
+
+{PF
+
+Contrapositive
+
+Suppose $a^2 + 2b^2 \not\equiv 0 \text{ (mod 3)}$
+
+Assume that  ONE of $a$ or $b$ is $\equiv$ to 0 modulo 3
+
+Case 1:
+$a$ $\equiv$ 0 (mod 3) and $b$ $\not\equiv$ 0 (mod 3), then 3 | $a$ and $a$ = 3$j$ for some $j \in \Z$.
+And $b \not\equiv$ 0 (mod 3), so 3$ \not | b$, then 3 $|$$ b^2 -1$, then  $b^2 -1$ = 3$k$ for some $k \in 
+\Z$.
+
+Then, $a^2 +2b^2$ 
+
+=$(3j)^2$ + 2(3$k$ +1)
+
+=  3(3$j^2$ + 2$k$) + 2.
+
+let $t$ = 3$j^2$ + 2$k$
+
+Since $a^2$ + 2$b^2$ = 3$t$+2, then $a^2$ + 2$b^2$ $\equiv$ 2 (mod 3) and  $a^2$ + 2$b^2$ $\not\equiv$ 0 (mod 3) 
+
+
+Case 2:
+$b$ $\equiv$ 0 (mod 3) and $a$ $\not\equiv$ 0 (mod 3), then 3 | $a$ and $a$ = 3$j$ for some $j \in \Z$.
+And $b \not\equiv$ 0 (mod 3), so 3$ \not | b$, then 3 $|$$ b^2 -1$, then  $b^2 -1$ = 3$k$ for some $k \in 
+\Z$.
+
+Thus, $a^2$-1 = 3$h$ for some $h \in \Z$  and $b = 3l$ for some $l \in \Z$
+
+Then, $a^2 +2b^2$
+
+ = (3$h$ + 1) +2$(3$l$)^2$
+ 
+ = 3($h + 6l)$ +1
+ 
+ Let $z$ = 3($h + 6l)$
+ 
+ Since  $a^2$ + 2$b^2$ = 3$z$+1, then $a^2$ + 2$b^2$ $\equiv$ 1 (mod 3) and  $a^2$ + 2$b^2$ $\not\equiv$ 0 (mod 3) 
+
+
+
+
+//}
+
+
+
+
+\end{enumerate}
+
+\end{document}

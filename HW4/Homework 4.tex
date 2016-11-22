@@ -1,0 +1,231 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+
+
+\pagestyle{headings} \thispagestyle{empty}
+%\pagestyle{empty}
+  \textwidth      6.4in
+      \oddsidemargin 0.0in
+      \topmargin     -0.4in
+      \topskip          0pt
+      \headheight      12pt
+      \footskip        18pt
+%      \footheight      12pt
+      \textheight     650pt
+
+\parindent=0cm
+\baselineskip=2cm
+
+%\include these lines if you want to use the LaTeX "theorem" environments
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{guess}{Conjecture}
+\newtheorem{example}[theorem]{Example}
+
+%include lines like this if you want to define your own commands
+%to save typing
+\newcommand{\PROOF}{\noindent {\bf Proof}: }
+\newcommand{\REF}[1]{[\ref{#1}]}
+\newcommand{\Ref}[1]{(\ref{#1})}
+\newcommand{\dt}{\mbox{\rm   dt}}
+\newcommand{\qed}{\Large{\bf{$\diamond$}}}
+\newcommand{\phat}{\hat{p}}
+
+\DeclareSymbolFont{AMSb}{U}{msb}{m}{n}
+\DeclareMathSymbol{\N}{\mathbin}{AMSb}{"4E}
+\DeclareMathSymbol{\Z}{\mathbin}{AMSb}{"5A}
+\DeclareMathSymbol{\R}{\mathbin}{AMSb}{"52}
+\DeclareMathSymbol{\Q}{\mathbin}{AMSb}{"51}
+\DeclareMathSymbol{\I}{\mathbin}{AMSb}{"49}
+\DeclareMathSymbol{\C}{\mathbin}{AMSb}{"43}
+
+%\setstretch{1.5}
+
+\renewcommand{\baselinestretch}{1.5}
+
+\begin{document}
+
+\textbf{Name: Taylor Heilman}    \hspace{4in} \textbf{Due: Wed. Oct 7}
+\begin{center} \textbf{Math 210: Homework 4 - Spring 2015} \end{center}
+
+\begin{enumerate}
+
+\item (Problem 4.36)  Prove that for every positive real number $x$ that $1+ \frac{1}{x^4} \geq \frac{1}{x} + \frac{1}{x^3}$.
+
+{PF
+
+${x^4} (1+ \frac{1}{x^4} \geq \frac{1}{x} + \frac{1}{x^3})$
+
+$\Rightarrow$  ${x^4} + 1 \geq {x^3} + x$
+
+$\Rightarrow$ ${x^4} + 1 - {x^3} - x \geq 0$
+
+$\Rightarrow$ ${x^3} (x + \frac{1}{x^3})-({x^3} - x)   \geq 0$
+
+$\Rightarrow$ $({x^3}-1)({x-1})  \geq 0$
+
+Since  $({x^3}-1)({x - 1})  \geq 0$, it follows that ${x^4} + 1 - {x^3} - x \geq 0$ and so ${x^4} + 1 - {x^3} - x \geq 0$
+
+Dividing this by  ${x^4}$ we get the desired  result.
+
+ $1+ \frac{1}{x^4} \geq \frac{1}{x} + \frac{1}{x^3}$.
+
+
+
+
+
+//
+}
+\item (Problem 4.46) Let $A$ and $B$ be sets.  Prove that $A \cup B = A \cap B$ if and only if $A = B$.
+
+{PF
+
+$(\Rightarrow)$ By Contrapositive
+
+Assume $A \neq  B$
+
+Let $a \in A$ but $a \notin B$
+
+Then $a \in A \cup B$
+
+and $a \notin A \cap B$
+
+So  $A \cup B \neq A \cap B$ 
+
+$(\Leftarrow)$
+
+Given A = B
+
+So for every $a \in A$ then there is also $a \in B$
+
+Then $A \cup B$ = $A$ = $B$
+
+and $A \cap B$ = $A$ = $B$
+
+Therefore $A \cup B = A \cap B$
+
+
+
+
+//
+}
+
+
+
+\item (Problem 4.56) Let $A, B$ and $C$ be sets.  Prove that $(A - B) \cup (A - C) = A - (B \cap C)$.
+{PF
+
+$(\subseteq )$
+
+Let $x \in (A - B) \cup (A - C)$
+
+wlog Assume $x \in A \times B$
+
+By definition $x \in A$ and $x \notin B$ 
+
+Similarly $x \in A$ and $x \notin C$ 
+
+Therefore $x \in (A - B) \cup (A - C)$
+
+$(\supseteq)$
+
+Let $x \in A - ( B \cap  C)$
+
+By definition $x \notin B \cap C$ 
+
+Then $x \in A$ and either $x \notin B$ and  $x \in C$, or $x \in B$ and  $x \notin C$, or $x \notin B$ and  $x \notin C$
+\vspace{5mm}
+
+\textbf{Case 1:}  $x \notin B$ and  $x \in C$
+
+Since $x \notin B$
+
+By definition $x \notin B \cap C$
+
+\vspace{5mm}
+
+\textbf{Case 2:}  $x \in B$ and  $x \notin C$
+
+Since $x \notin C$
+
+By definition $x \notin B \cap C$
+
+\vspace{5mm}
+
+
+\textbf{Case 3:}  $x \notin B$ and  $x \notin C$
+
+Since $x \notin C$ and  $x \notin C$
+
+By definition $x \notin B \cap C$
+
+\vspace{5mm}
+
+Therefore $x \in A - ( B \cup  C)$
+
+So $(A - B) \cup (A - C)$ = $A - ( B \cup  C)$
+
+//
+}
+
+
+
+
+\item (Problem 4.58) Let $A, B$ and $C$ be sets.  Prove that $A \cap \overline{(B \cap \overline{C})} = \overline{(\overline{A} \cup B) \cap (\overline{A} \cup \overline{C})}$.
+
+{PF
+
+$A \cap \overline{(B \cap \overline{C})}$ 
+
+$=$  $A \cap {(\overline B \cup  \overline { \overline C})}$
+
+ $=$ $(A \cap \overline B) \cup (A \cap \overline {\overline C})$
+
+$=$ $\overline {(A \cup \overline B)} \cap (\overline{A \cup \overline {\overline C})}$
+
+$=$ $ \overline{(\overline{A} \cup B) \cap (\overline{A} \cup \overline{C})}$.
+
+//
+}
+
+\item (Problem 4.68) Let $A, B, C$ and $D$ be sets.  Prove that \newline $(A \times B) \cap (C \times D) = (A \cap C) \times (B \cap D)$.
+
+{PF
+
+	$(\subseteq)$
+
+	Let $(x,y) \in (A \times B) \cap (B \times D)$
+	
+	Then $(x,y) \in A \times B $ and $ (x,y) \in B \times D$
+	
+	Thus $(x,y) \in A \times B$ and $(x,y) \in  C \times D$
+	
+	By definition $(x,y) \in (A \times B) \cap (C \times D)$
+	
+	
+	$(\supseteq)$
+	
+	Let $(x,y) \in ( A \cap C) \times (B \cap D)$
+	
+	thus $x \in (A \cap C$) and $y \in (B \cap D)$
+	
+	Then  $x \in A$, $x \in C$ 
+	
+	Also  $y \in B$ and $y \in D$
+	
+	By definition $(x,y) \in ( A \cap C) \times (B \cap D)$
+	
+	So $(A \times B) \cap (B \times D)$ = $( A \cap C) \times (B \cap D)$
+	
+	//
+
+
+}
+
+
+
+\end{enumerate}
+
+\end{document}
